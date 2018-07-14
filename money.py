@@ -18,9 +18,15 @@ if(importo<=0):
 
 else:
     n_venti = importo//20
-    n_dieci = (importo-20*n_venti) //10
-    n_cinque = ( (importo-20*n_venti) - (10*n_dieci) ) //5
-    n_uno = (importo-20*n_venti) - (10*n_dieci) - (5*n_cinque)  
+    importo = importo - 20 * n_venti
+
+    n_dieci = importo // 10
+    importo = importo - 10 * n_dieci
+    
+    n_cinque = importo // 5
+    importo = importo - 5 * n_cinque
+
+    n_uno = importo  
 
     print("Banconote da $20: ", n_venti)
     print("Banconote da $10: ", n_dieci)
